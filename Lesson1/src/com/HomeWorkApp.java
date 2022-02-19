@@ -1,3 +1,5 @@
+package com;
+
 public class HomeWorkApp {
     public static void main(String[] args) {
         printThreeWords();
@@ -14,9 +16,9 @@ public class HomeWorkApp {
         int a = -3;
         int b = 2;
         if (a + b >= 0) {
-            System.out.println("Positive sum");
+            System.out.println("Положительная сумма");
         } else {
-            System.out.println("Negative sum");
+            System.out.println("Отрицательная сумма");
         }
     }
     public static void printColor(){

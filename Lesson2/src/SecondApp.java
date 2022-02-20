@@ -2,36 +2,33 @@ public class SecondApp {
 
     public static void main(String[] args) {
 
-	    checkSum(20, 0); //проверка, что сумма двух чисел лежит в пределах от 10 от 20 (включительно)
+        System.out.println(checkSum(20, 0)); //проверка, что сумма двух чисел лежит в пределах от 10 от 20 (включительно)
 
-	    lookForPositive(0); //проверка целого число на неотрицательность
+        System.out.println(lookForPositive(0)); //проверка целого число на неотрицательность
 
-        lookForNegative(-1); //проверка целого число на отрицательность
+        System.out.println(lookForNegative(-1)); //проверка целого число на отрицательность
 
-	    typeFewTimes("One more time, baby!",5); //печать введённой строки указанное количество раз
+        typeFewTimes("One more time, baby!",5); //печать введённой строки указанное количество раз
 
-        ifLeapYear(1956); //определение високосного года
+        System.out.println(isLeapYear(2000)); //определяет високосный год или нет
 
     }
 
     public static boolean checkSum(int a, int b){
 
         boolean result = a + b >= 10 && a + b <= 20; // 10 <= a + b <= 20
-        System.out.println(result);
         return result;
     }
 
     public static boolean lookForPositive(int digit){
 
         boolean result = digit >= 0; //неотрицательное число
-        System.out.println(result);
         return result;
     }
 
     public static boolean lookForNegative(int digit){
 
         boolean result = digit < 0; //отрицательное число
-        System.out.println(result);
         return result;
     }
 
@@ -51,14 +48,17 @@ public class SecondApp {
         {
             System.out.println(someText); //выводим строку
         }
+        return;
     }
 
-    public static boolean ifLeapYear(int year){
+    public static boolean isLeapYear(int year){
 
         boolean result = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
-        System.out.println(result);
+        // если год делится нацело на 4, но не на 100
+        // ИЛИ
+        // год делится нацело И на 4, И на 400,
+        // то он високосный
         return result;
     }
-
 
 }
